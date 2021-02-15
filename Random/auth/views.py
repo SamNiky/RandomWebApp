@@ -7,5 +7,5 @@ def login(request):
 def signUp(request):
     return HttpResponse(" Sign-Up page ")
 
-def SignOut(request):
+def signOut(request):
     return HttpResponse(" Sign-Out page ")
