@@ -1,5 +1,11 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
+from .engine import randomInt
+import time
 
 def random(request):
-    return HttpResponse(" Page with randomizer ")
+    a = randomInt()
+    time.sleep(5)
+    return HttpResponse(a)
+
+
