@@ -1,6 +1,11 @@
 from django.shortcuts import render, redirect
-from django.http import HttpResponse
+from .models import CurrentNumber
+from django.http import JsonResponse
 
 
 def random(request):
-    return HttpResponse("page with randomizer")
+    current = CurrentNumber.objects.get(id=1)
+    context = {'cur': current.cur_numb}
+    if request.is_ajax():
+        return JsonResponse(context, status=200)
+    return render(request, 'randomizer/random.html', context)
