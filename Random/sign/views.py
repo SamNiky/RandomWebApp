@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def home(request):
-    return HttpResponse("start page")
+    return render(request, 'sign/index.html')
 
 def login(request):
     return HttpResponse("login page")
