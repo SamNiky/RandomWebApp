@@ -22,6 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('random/', include('randomizer.urls')),
     path('', include('sign.urls')),
+    path('social-oauth/', include('social_django.urls', namespace='social')),
 ]
 
 if settings.DEBUG:

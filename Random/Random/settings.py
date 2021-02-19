@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_celery_beat',
     'django_celery_results',
+    'social_django',
 ]
 
 MIDDLEWARE = [
@@ -77,9 +78,16 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'social_django.context_processors.backends',
+                'social_django.context_processors.login_redirect',
             ],
         },
     },
+]
+
+AUTHENTICATION_BACKENDS =[
+    'social_core.backends.github.GithubOAuth2',
+    'django.contrib.auth.backends.ModelBackend',
 ]
 
 WSGI_APPLICATION = 'Random.wsgi.application'
@@ -114,6 +122,9 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+SOCIAL_AUTH_GITHUB_KEY = 'cafd77dcdb78356954df'
+SOCIAL_AUTH_GITHUB_SECRET = 'd0a68eb361f04743111e8cafa2404870005340eb'
+LOGIN_REDIRECT_URL ='/random'
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
