@@ -27,7 +27,7 @@ SECRET_KEY = 'xeh1&_epxm#n%99&pv2^pt^h6%tcc!z(hr%lwdr&*8hvwlqi=h'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['random-web-app.herokuapp.com', '127.0.0.1','localhost']
+ALLOWED_HOSTS = ['*']
 
 # Celery Configuration Options
 CELERY_TIMEZONE = "Europe/Moscow"
@@ -100,8 +100,12 @@ WSGI_APPLICATION = 'Random.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd2c3k56dudshpe',
+        'USER': 'uxbntvesyzeyxh',
+        'PASSWORD': 'ed706451f3c30e7f31de43ff381150b50822c088685f142a612f3d58824eb215',
+        'HOST': 'ec2-54-228-174-49.eu-west-1.compute.amazonaws.com',
+        'PORT': '5432'
     }
 }
 

@@ -24,6 +24,7 @@ idna==2.10
 kombu==5.0.2
 oauthlib==3.1.0
 prompt-toolkit==3.0.16
+psycopg2-binary==2.8.6
 pycparser==2.20
 PyJWT==2.0.1
 python-crontab==2.5.1
