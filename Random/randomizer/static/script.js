@@ -1,5 +1,8 @@
 $(document).ready(function(){
-	circle = $('.circle')
+    $('#logout').click(function(){window.location.href = "/auth-logouts"});
+    circle = $('.circle')
+
+//AJAX request
 	setInterval(function(){
 		$.ajax({
 			url: '',

@@ -45,6 +45,7 @@ body{
   font-size: 32px;
 	text-transform: lowercase;
   color: #fff;
+	letter-spacing: 0.585em;
 }
 .random-margin{
 	margin-bottom: 190px;
@@ -71,6 +72,7 @@ button{
 }
 .btn:hover{
 	background-color: #D1D646;
+	color: #212738;
 }
 .btn1{
 	position: absolute;
@@ -103,4 +105,57 @@ button{
 	float: right;
 	margin-top: 21%;
 	margin-right: 10%;
+}
+.number2, .number3{
+	position: absolute;
+	right: 0px;
+}
+.number2{
+	top: 23%;
+}
+.number3{
+	bottom: 0px;
+}
+form{
+	margin-bottom: 32px;
+}
+.forms, .btn-form, input{
+	width: 100%;
+	max-width: 387px
+}
+input{
+	padding: 0;
+	border: 1px solid #D1D646;
+	margin-bottom: 32px;
+	height: 48px;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0);
+	color: #fff;
+	font-size: 15px;
+}
+input:focus{
+    outline-offset: 0px;
+    outline-color: rgba(0, 0, 0, 0);
+    outline-style: none;
+}
+.btn-form{
+	border: 1px solid #F97068;
+}
+a{
+	text-decoration: none;
+	color: #fff;
+}
+a:hover{
+	text-decoration: underline;
+}
+.sign-cont{
+	margin-top: 15%;
+	margin-left: 10%;
+}
+.sign-head{
+	color: #F97068;
+}
+.alert{
+    color: #F97068;
+    /* position: absolute; */
 }

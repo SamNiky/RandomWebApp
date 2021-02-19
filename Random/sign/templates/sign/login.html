@@ -1,0 +1,17 @@
+{% extends 'sign.html' %}
+{% load static %}
+
+{% block head %}вход{% endblock %}
+{% block content %}
+	<form action="" method="post" class="forms" id="login-form">
+		{% csrf_token %}
+		<input type="text" placeholder="логин" name="username"><br>
+		<input type="password" placeholder="пароль" name="password"><br>
+		{% if error %}
+		<p class="alert">{{ error }}</p>
+		{% endif %}
+		<button class="btn btn-form" type="submit">войти</button>
+	</form>
+{% endblock %}
+{% block script %}{% static 'loginScript.js' %}{% endblock %}
+
