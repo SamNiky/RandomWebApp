@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
+import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -24,16 +25,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'xeh1&_epxm#n%99&pv2^pt^h6%tcc!z(hr%lwdr&*8hvwlqi=h'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['random-web-app.herokuapp.com', '127.0.0.1','localhost']
 
 # Celery Configuration Options
 CELERY_TIMEZONE = "Europe/Moscow"
 CELERY_TASK_TRACK_STARTED = True
 CELERY_TASK_TIME_LIMIT = 30 * 60
-CELERY_BROKER_URL = 'redis://localhost:6379'
-CELERY_RESULT_BACKEND = 'redis://localhost:6379'
+CELERY_BROKER_URL = 'redis://:p05ffbcbc2d08145e68c8b258d0ec8c62a3adc217e4ca70cc87d7bd7e31c9686e@ec2-54-220-231-57.eu-west-1.compute.amazonaws.com:18409'
+CELERY_RESULT_BACKEND = 'redis://:p05ffbcbc2d08145e68c8b258d0ec8c62a3adc217e4ca70cc87d7bd7e31c9686e@ec2-54-220-231-57.eu-west-1.compute.amazonaws.com:18409'
 CELERY_ACCEPT_CONTENT = ['application/json']
 CELERY_RESULT_SERIALIZER = 'json'
 CELERY_TASK_SERIALIZER = 'json'
@@ -57,6 +58,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -144,4 +146,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'apps/articles/static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+
+django_heroku.settings(locals())
