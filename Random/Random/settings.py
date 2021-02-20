@@ -33,8 +33,8 @@ ALLOWED_HOSTS = ['*']
 CELERY_TIMEZONE = "Europe/Moscow"
 CELERY_TASK_TRACK_STARTED = True
 CELERY_TASK_TIME_LIMIT = 30 * 60
-CELERY_BROKER_URL = 'redis://:p0ff2537f4c80449bf33a99e2c94abcb50d0a8e5e73db4e4cce56b1122db0d962@ec2-79-125-41-154.eu-west-1.compute.amazonaws.com:28199'
-CELERY_RESULT_BACKEND = 'redis://:p0ff2537f4c80449bf33a99e2c94abcb50d0a8e5e73db4e4cce56b1122db0d962@ec2-79-125-41-154.eu-west-1.compute.amazonaws.com:28199'
+CELERY_BROKER_URL = 'redis://:p547a5c1327957c7ac2256624b3af70b54def43a2d40769bd3a412d1dffa6f705@ec2-34-198-87-71.compute-1.amazonaws.com:32589'
+CELERY_RESULT_BACKEND = 'redis://:p547a5c1327957c7ac2256624b3af70b54def43a2d40769bd3a412d1dffa6f705@ec2-34-198-87-71.compute-1.amazonaws.com:32589'
 CELERY_ACCEPT_CONTENT = ['application/json']
 CELERY_RESULT_SERIALIZER = 'json'
 CELERY_TASK_SERIALIZER = 'json'
@@ -101,10 +101,10 @@ WSGI_APPLICATION = 'Random.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd2c3k56dudshpe',
-        'USER': 'uxbntvesyzeyxh',
-        'PASSWORD': 'ed706451f3c30e7f31de43ff381150b50822c088685f142a612f3d58824eb215',
-        'HOST': 'ec2-54-228-174-49.eu-west-1.compute.amazonaws.com',
+        'NAME': 'd44eib94t62i36',
+        'USER': 'cdddyetcnhlrot',
+        'PASSWORD': '86d8e3f621aa83889b6e02bd2a77408ffa708ad23ae8ca59acd839703b163041',
+        'HOST': 'ec2-54-90-13-87.compute-1.amazonaws.com',
         'PORT': '5432'
     }
 }
